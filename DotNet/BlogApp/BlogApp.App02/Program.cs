@@ -68,7 +68,7 @@ public class Blog
 
     public string Name { get; set; }
 
-    public ICollection<Post> Posts { get; set; } = new List<Post>();
+    public ICollection<Post> Posts { get; } = new List<Post>();
 }
 
 public class Post
