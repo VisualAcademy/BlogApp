@@ -88,9 +88,9 @@ public class BlogsContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder
-            //.LogTo(Console.WriteLine) //[!] 로깅 
-            //.LogTo(Console.WriteLine, LogLevel.Information) //[!] 로깅 
-            .LogTo(Console.WriteLine, LogLevel.Debug) //[!] 로깅 
+            //.LogTo(Console.WriteLine) //[1] 로깅 
+            //.LogTo(Console.WriteLine, LogLevel.Information) //[2] 로깅 
+            .LogTo(Console.WriteLine, LogLevel.Debug) //[3] 로깅 
             .EnableSensitiveDataLogging() //[!] ? 대신 직접 값을 입력해서 디버깅
             .UseSqlServer("server=(localdb)\\mssqllocaldb;Database=Blogs");
 }

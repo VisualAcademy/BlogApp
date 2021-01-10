@@ -1,4 +1,5 @@
 ﻿// 모델 클래스 변경 
+// 생성자로 개체 초기화
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;

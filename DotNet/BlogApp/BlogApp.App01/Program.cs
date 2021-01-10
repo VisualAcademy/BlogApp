@@ -17,6 +17,9 @@ class Program
     }
 }
 
+/// <summary>
+/// 블로그: 포스트에 대한 카테고리 역할 또는 다중 블로그 이름 
+/// </summary>
 public class Blog
 {
     public int Id { get; set; }
