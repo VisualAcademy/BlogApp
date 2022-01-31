@@ -9,6 +9,8 @@ class Program
 
         using (var context = new BlogsContext())
         {
+            // API 만들기 및 삭제 
+            // https://docs.microsoft.com/ko-kr/ef/core/managing-schemas/ensure-created
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
         }
