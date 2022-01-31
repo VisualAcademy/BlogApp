@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 class Program
@@ -13,6 +14,8 @@ class Program
             // https://docs.microsoft.com/ko-kr/ef/core/managing-schemas/ensure-created
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
+            var sql = context.Database.GenerateCreateScript();
+            Console.WriteLine($"생성된 SQL문:\n{sql}");
         }
 
         // SQL Server 개체 탐색기에서 Blogs 데이터베이스와 Blogs, Posts 테이블 확인
